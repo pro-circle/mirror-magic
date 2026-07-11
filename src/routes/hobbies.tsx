@@ -110,9 +110,9 @@ function HobbiesPage() {
         hash="hobbies"
         onClick={() => blockSectionGenerationOnce("hobbies")}
         className="fixed bottom-6 right-6 z-40 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-accent text-accent-foreground font-medium text-xs shadow-md hover:scale-105 transition-transform"
-        aria-label="Back to Hobbies"
+        aria-label="Back to Blogs"
       >
-        <ArrowLeft size={12} /> Back to Hobbies
+        <ArrowLeft size={12} /> Back to Blogs
       </Link>
     </div>
   );
