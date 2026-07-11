@@ -76,7 +76,7 @@ const Header = () => {
             <button
               key={item}
               onClick={() => scrollTo(item)}
-              className="relative text-sm font-medium transition-all duration-200 py-1 group"
+              className="relative text-base font-medium transition-all duration-200 py-1 group"
             >
               <span className={`transition-all duration-200 ${
                 activeSection === item.toLowerCase()
