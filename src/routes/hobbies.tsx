@@ -14,7 +14,7 @@ export const Route = createFileRoute("/hobbies")({
   component: HobbiesPage,
 });
 
-type Item = { title: string; description: string; image: string };
+type Item = { title: string; description: string; image: string; year: string };
 
 const items: Item[] = [
   {
@@ -22,30 +22,35 @@ const items: Item[] = [
     description:
       "Capturing candid moments and landscapes on weekends. I enjoy experimenting with natural light, composition and quiet street scenes.",
     image: "/images/ach1.jpg",
+    year: "2024",
   },
   {
     title: "Open Source",
     description:
       "Contributing to developer tools and writing small libraries. It keeps me sharp and connected with the wider engineering community.",
     image: "/images/ach2.jpg",
+    year: "2025",
   },
   {
     title: "Reading & Writing",
     description:
       "Long-form essays on systems design, distributed computing, and the craft of building software with intention.",
     image: "/images/ach3.jpg",
+    year: "2025",
   },
   {
     title: "Cloud Practitioner Certificate",
     description:
       "AWS Certified Cloud Practitioner — fundamentals of AWS services, billing, security, and architecture best practices.",
     image: "/images/certi1.jpg",
+    year: "2024",
   },
   {
     title: "Full Stack Certificate",
     description:
       "Hands-on certification covering modern web stacks, REST/GraphQL APIs, and production-grade deployment workflows.",
     image: "/images/cert2.jpg",
+    year: "2025",
   },
 ];
 
