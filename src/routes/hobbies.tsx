@@ -68,10 +68,10 @@ function HobbiesPage() {
           transition={{ duration: 0.5 }}
           className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4"
         >
-          Hobbies and Certs
+          Blogs and Certs
         </motion.h1>
         <p className="text-muted-foreground max-w-2xl mb-16">
-          Hobbies and the certificates I did.
+          Recently I did something...
         </p>
 
         <div className="space-y-20 md:space-y-28">
