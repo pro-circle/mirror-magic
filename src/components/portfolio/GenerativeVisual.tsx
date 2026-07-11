@@ -30,7 +30,7 @@ export default function GenerativeVisual({ className }: GenerativeVisualProps) {
     };
 
     const palette = () => ({
-      node: "hsl(217, 91%, 60%)",
+      node: "hsl(217, 91%, 68%)",
       line: "hsl(48, 96%, 53%)",
       pulse: "hsl(48, 96%, 63%)",
     });
