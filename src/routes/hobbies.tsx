@@ -7,8 +7,8 @@ import { blockSectionGenerationOnce } from "@/hooks/use-section-generating";
 export const Route = createFileRoute("/hobbies")({
   head: () => ({
     meta: [
-      { title: "Hobbies & Certificates" },
-      { name: "description", content: "A look at my hobbies and the certificates I've earned." },
+      { title: "Blogs & Certificates" },
+      { name: "description", content: "A look at my blogs and the certificates I've earned." },
     ],
   }),
   component: HobbiesPage,
