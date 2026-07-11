@@ -166,8 +166,8 @@ const Skills = () => {
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-50 flex items-center justify-center bg-background/80 backdrop-blur-sm p-6"
             onClick={() => setShowResume(false)}
-            onWheel={(e) => e.preventDefault()}
-            onTouchMove={(e) => e.preventDefault()}
+            onWheel={(e: React.WheelEvent) => e.preventDefault()}
+            onTouchMove={(e: React.TouchEvent) => e.preventDefault()}
           >
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
@@ -175,7 +175,7 @@ const Skills = () => {
               exit={{ scale: 0.9, opacity: 0 }}
               transition={{ type: "spring", stiffness: 300, damping: 25 }}
               className="bg-card border-2 border-accent/30 rounded-2xl max-w-5xl w-full h-[88vh] overflow-hidden flex flex-col relative"
-              onClick={(e) => e.stopPropagation()}
+              onClick={(e: React.MouseEvent) => e.stopPropagation()}
             >
               <button
                 onClick={() => setShowResume(false)}
