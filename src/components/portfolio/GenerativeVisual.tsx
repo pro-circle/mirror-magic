@@ -30,7 +30,7 @@ export default function GenerativeVisual({ className }: GenerativeVisualProps) {
     };
 
     const palette = () => ({
-      node: "hsl(217, 91%, 60%)",
+      node: "hsl(217, 91%, 68%)",
       line: "hsl(48, 96%, 53%)",
       pulse: "hsl(48, 96%, 63%)",
     });
@@ -118,7 +118,7 @@ export default function GenerativeVisual({ className }: GenerativeVisualProps) {
       const mx = mouseRef.x;
       const my = mouseRef.y;
       const hasMouse = mouseRef.active;
-      const influenceRadius = 140;
+      const influenceRadius = 110;
 
       for (let i = 0; i < visibleCount; i++) {
         const p = particles[i];
@@ -127,7 +127,7 @@ export default function GenerativeVisual({ className }: GenerativeVisualProps) {
           const dy = p.y - my;
           const dist = Math.hypot(dx, dy);
           if (dist < influenceRadius && dist > 0.01) {
-            const force = (1 - dist / influenceRadius) * 0.6;
+            const force = (1 - dist / influenceRadius) * 0.25;
             p.vx += (dx / dist) * force;
             p.vy += (dy / dist) * force;
           }
@@ -200,7 +200,7 @@ export default function GenerativeVisual({ className }: GenerativeVisualProps) {
     <div ref={containerRef} className={`relative w-full h-full ${className ?? ""}`}>
       <canvas
         ref={canvasRef}
-        className="pointer-events-auto absolute inset-0 block h-full w-full rounded-2xl drop-shadow-[0_0_28px_hsl(217,91%,60%,0.45)]"
+        className="pointer-events-auto absolute inset-0 block h-full w-full rounded-2xl drop-shadow-[0_0_34px_hsl(217,91%,68%,0.65)]"
       />
     </div>
   );

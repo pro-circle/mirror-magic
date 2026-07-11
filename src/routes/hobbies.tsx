@@ -7,8 +7,8 @@ import { blockSectionGenerationOnce } from "@/hooks/use-section-generating";
 export const Route = createFileRoute("/hobbies")({
   head: () => ({
     meta: [
-      { title: "Hobbies & Certificates" },
-      { name: "description", content: "A look at my hobbies and the certificates I've earned." },
+      { title: "Blogs & Certificates" },
+      { name: "description", content: "A look at my blogs and the certificates I've earned." },
     ],
   }),
   component: HobbiesPage,
@@ -68,10 +68,10 @@ function HobbiesPage() {
           transition={{ duration: 0.5 }}
           className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4"
         >
-          Hobbies and Certs
+          Blogs and Certs
         </motion.h1>
         <p className="text-muted-foreground max-w-2xl mb-16">
-          Hobbies and the certificates I did.
+          Recently I did something...
         </p>
 
         <div className="space-y-20 md:space-y-28">
@@ -110,9 +110,9 @@ function HobbiesPage() {
         hash="hobbies"
         onClick={() => blockSectionGenerationOnce("hobbies")}
         className="fixed bottom-6 right-6 z-40 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-accent text-accent-foreground font-medium text-xs shadow-md hover:scale-105 transition-transform"
-        aria-label="Back to Hobbies"
+        aria-label="Back to Blogs"
       >
-        <ArrowLeft size={12} /> Back to Hobbies
+        <ArrowLeft size={12} /> Back to Blogs
       </Link>
     </div>
   );

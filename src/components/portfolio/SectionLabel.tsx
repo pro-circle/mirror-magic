@@ -35,7 +35,7 @@ const SectionLabel = ({ label, phase, onClick, className, anchorId, instant = fa
   return (
     <div className={cn("flex items-center gap-3", className)}>
       <div className="w-8 h-[2px] bg-accent" />
-      <p className="text-base font-semibold text-accent tracking-widest uppercase">
+      <p className="text-lg font-semibold text-accent tracking-widest uppercase">
         {onClick ? (
           <button
             onClick={onClick}

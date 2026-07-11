@@ -20,24 +20,24 @@ const Gallery = () => {
           className="grid md:grid-cols-[1fr_2fr] gap-12 md:gap-20"
         >
           <div>
-            <SectionLabel label="Hobbies" phase={phase} />
+            <SectionLabel label="Blog" phase={phase} />
           </div>
           <div className="stream-reveal" data-ready={phase === "ready"}>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Hobbies and Certs
+              Blogs and Certs
             </h2>
             <StreamText
               as="p"
               start={phase === "ready"}
               startDelayMs={150}
               className="text-muted-foreground leading-relaxed mb-8 max-w-lg block"
-              text="Hobbies and the certificates I did"
+              text="Recently I did something..."
             />
 
             <Link to="/hobbies">
               <Button variant="hero" size="lg">
                 <Images size={16} />
-                Explore Hobbies
+                Explore Blogs
               </Button>
             </Link>
           </div>
