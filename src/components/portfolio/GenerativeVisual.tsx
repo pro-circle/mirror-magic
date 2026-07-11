@@ -200,7 +200,7 @@ export default function GenerativeVisual({ className }: GenerativeVisualProps) {
     <div ref={containerRef} className={`relative w-full h-full ${className ?? ""}`}>
       <canvas
         ref={canvasRef}
-        className="pointer-events-auto absolute inset-0 block h-full w-full rounded-2xl drop-shadow-[0_0_28px_hsl(217,91%,60%,0.45)]"
+        className="pointer-events-auto absolute inset-0 block h-full w-full rounded-2xl drop-shadow-[0_0_34px_hsl(217,91%,68%,0.65)]"
       />
     </div>
   );
