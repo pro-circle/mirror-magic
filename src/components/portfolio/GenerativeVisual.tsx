@@ -118,7 +118,7 @@ export default function GenerativeVisual({ className }: GenerativeVisualProps) {
       const mx = mouseRef.x;
       const my = mouseRef.y;
       const hasMouse = mouseRef.active;
-      const influenceRadius = 140;
+      const influenceRadius = 110;
 
       for (let i = 0; i < visibleCount; i++) {
         const p = particles[i];
@@ -127,7 +127,7 @@ export default function GenerativeVisual({ className }: GenerativeVisualProps) {
           const dy = p.y - my;
           const dist = Math.hypot(dx, dy);
           if (dist < influenceRadius && dist > 0.01) {
-            const force = (1 - dist / influenceRadius) * 0.6;
+            const force = (1 - dist / influenceRadius) * 0.25;
             p.vx += (dx / dist) * force;
             p.vy += (dy / dist) * force;
           }
