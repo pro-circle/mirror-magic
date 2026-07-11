@@ -166,8 +166,8 @@ const Skills = () => {
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-50 flex items-center justify-center bg-background/80 backdrop-blur-sm p-6"
             onClick={() => setShowResume(false)}
-            onWheel={(e) => e.preventDefault()}
-            onTouchMove={(e) => e.preventDefault()}
+            onWheel={(e: React.WheelEvent) => e.preventDefault()}
+            onTouchMove={(e: React.TouchEvent) => e.preventDefault()}
           >
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
