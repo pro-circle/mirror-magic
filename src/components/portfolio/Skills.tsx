@@ -134,7 +134,7 @@ const Skills = () => {
                       </HoverCardTrigger>
                       <HoverCardContent
                         className="w-80 border-border shadow-xl"
-                        style={{ backgroundColor: "#f5f5f0", color: "#000000", backdropFilter: "none", opacity: 1 }}
+                        style={{ backgroundColor: "#ebebe3", color: "#000000", backdropFilter: "none", opacity: 1 }}
                         side="right"
                         align="start"
                       >
