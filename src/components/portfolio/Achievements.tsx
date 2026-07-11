@@ -220,16 +220,16 @@ const Achievements = () => {
                           }}
                           className="group/card relative w-full rounded-xl border-2 border-border bg-card overflow-hidden hover:bg-white/10 hover:border-white/30 hover:scale-[1.03] hover:z-10 hover:shadow-2xl transition-[transform,box-shadow,background-color,border-color] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform"
                         >
-                          <div className="flex h-auto min-h-[182px]">
-                            <div className="relative w-[240px] h-[182px] flex-shrink-0">
+                          <div className="flex flex-col md:flex-row h-auto min-h-[240px] md:min-h-[182px]">
+                            <div className="relative w-full h-[220px] md:w-[240px] md:h-[182px] flex-shrink-0">
                               <LoadingImage src={achievement.image} alt={achievement.title} rounded="rounded-none" />
                             </div>
-                            <div className="p-6 flex flex-col justify-between flex-1 min-w-0">
+                            <div className="p-5 md:p-6 flex flex-col justify-between flex-1 min-w-0">
                               <div>
                                 <div className="flex items-start justify-between gap-2 mb-2">
-                                  <div className="flex items-center gap-2">
+                                  <div className="flex items-center gap-2 min-w-0">
                                     <Trophy size={18} className="text-accent shrink-0" />
-                                    <h4 className="font-display text-lg font-bold text-foreground truncate">
+                                    <h4 className="font-display text-lg font-bold text-foreground leading-tight">
                                       {achievement.title}
                                     </h4>
                                   </div>
