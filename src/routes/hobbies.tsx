@@ -93,7 +93,10 @@ function HobbiesPage() {
                   reversed ? "md:[&>*:first-child]:order-2" : ""
                 }`}
               >
-                <div className="rounded-2xl overflow-hidden bg-secondary aspect-[4/3] border border-border">
+                <div className="relative rounded-2xl overflow-hidden bg-secondary aspect-[4/3] border border-border">
+                  <span className="absolute top-3 left-3 z-10 inline-flex items-center px-2.5 py-1 rounded-full bg-background/80 backdrop-blur-sm text-foreground font-display text-sm font-semibold border border-border">
+                    {item.year}
+                  </span>
                   <LoadingImage src={item.image} alt={item.title} rounded="rounded-2xl" />
                 </div>
                 <div>
