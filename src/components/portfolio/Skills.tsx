@@ -175,7 +175,7 @@ const Skills = () => {
               exit={{ scale: 0.9, opacity: 0 }}
               transition={{ type: "spring", stiffness: 300, damping: 25 }}
               className="bg-card border-2 border-accent/30 rounded-2xl max-w-5xl w-full h-[88vh] overflow-hidden flex flex-col relative"
-              onClick={(e) => e.stopPropagation()}
+              onClick={(e: React.MouseEvent) => e.stopPropagation()}
             >
               <button
                 onClick={() => setShowResume(false)}
