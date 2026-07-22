@@ -48,7 +48,7 @@ const skillGroups = [
   },
   {
     category: "Data",
-    skills: ["PostgreSQL", "MongoDB"],
+    skills: ["PostgreSQL", "MongoDB", "PowerBI"],
   },
   {
     category: "AI Frames",
@@ -56,7 +56,7 @@ const skillGroups = [
   },
   {
     category: "Other Skills",
-    skills: ["OpenAI API", "Ollama", "PowerBI", "Hugging Face"],
+    skills: ["OpenAI API", "Ollama", "Hugging Face"],
   },
 ];
 
