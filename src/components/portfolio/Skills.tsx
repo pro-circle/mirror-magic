@@ -19,7 +19,6 @@ const skillDetails: Record<string, string> = {
   Tensorflow: "Simple and powerful stack while working with neural networks.",
   "Scikit-learn": "Used for developing and prototyping ML and DL models for years.",
   Firebase:"I use for fast, simple prototyping and deployment.",
-  AWS: "EC2, Lambda, RDS, S3,- building production workloads on AWS.",
   Docker: "Reproducible builds, multi-stage images and independent conainers.",
   "OpenAI API": "A common SDK the most LLMs are being worked.",
   "CI/CD": "GitHub Actions and pipeline-as-code workflows with automated quality gates.",
@@ -44,7 +43,7 @@ const skillGroups = [
   },
   {
     category: "Infrastructure",
-    skills: ["AWS", "Docker", "CI/CD", "Linux"],
+    skills: ["Docker", "CI/CD", "Linux"],
   },
   {
     category: "Data",
