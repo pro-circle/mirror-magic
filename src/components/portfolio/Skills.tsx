@@ -28,6 +28,9 @@ const skillDetails: Record<string, string> = {
   Flask: "Chosen for flexible and quick protoypes.",
   Supabase:"Backend as a service (BaaS) with advanced postgreSQL Database",
   MongoDB: "Document modelling, aggregation pipelines and operational best practices.",
+  n8n: "Workflow automation for connecting APIs, services, and AI agents with visual pipelines.",
+  PowerBI: "Interactive dashboards and business intelligence reports from diverse data sources.",
+  "Hugging Face": "Leveraging open-source models, datasets, and inference APIs for NLP and AI tasks.",
 };
 
 const skillGroups = [
@@ -49,11 +52,11 @@ const skillGroups = [
   },
   {
     category: "AI Frames",
-    skills: ["Tensorflow", "Scikit-learn", ""],
+    skills: ["Tensorflow", "Scikit-learn", "n8n"],
   },
   {
     category: "Other Skills",
-    skills: ["OpenAI API", "Ollama"],
+    skills: ["OpenAI API", "Ollama", "PowerBI", "Hugging Face"],
   },
 ];
 
