@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 import LoadingImage from "@/components/portfolio/LoadingImage";
+import ThemeToggle from "@/components/portfolio/ThemeToggle";
 import { blockSectionGenerationOnce } from "@/hooks/use-section-generating";
 
 export const Route = createFileRoute("/hobbies")({
@@ -57,6 +58,7 @@ const items: Item[] = [
 function HobbiesPage() {
   return (
     <div className="min-h-screen bg-background">
+      <div className="fixed top-4 right-4 z-50"><ThemeToggle /></div>
       <div className="max-w-6xl mx-auto section-padding">
         <Link
           to="/"

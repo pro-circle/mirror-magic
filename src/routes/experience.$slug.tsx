@@ -2,6 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeft, Briefcase } from "lucide-react";
 import { useEffect } from "react";
 import { experienceData, getExperienceBySlug } from "@/data/experience";
+import ThemeToggle from "@/components/portfolio/ThemeToggle";
 import { blockSectionGenerationOnce } from "@/hooks/use-section-generating";
 import LoadingImage from "@/components/portfolio/LoadingImage";
 
@@ -41,6 +42,7 @@ function ExperienceDetail() {
 
   return (
     <div className="min-h-screen bg-background">
+      <div className="fixed top-4 right-4 z-50"><ThemeToggle /></div>
       <div className="max-w-4xl mx-auto px-6 md:px-10 py-10 md:py-14">
         <Link
           to="/"
