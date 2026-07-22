@@ -94,7 +94,7 @@ function ProjectDetail() {
           <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
             <Button variant="hero" size="lg">
               <ExternalLink size={16} />
-              View Site
+              View Demo
             </Button>
           </a>
         </div>

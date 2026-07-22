@@ -10,7 +10,7 @@ import StreamText from "./StreamText";
 
 const skillDetails: Record<string, string> = {
   Bash: "Using interactive terminal to manage files, monitor processes, and configure system settings.",
-  Java: "Fast and high performance language for enterprise projects.",
+  
   Linux: "Ubuntu for the perfect balance between the simplicity of host OS and the customizability of Linux.",
   Python: "Daily driver for scripting, data work, and ML prototypes.",
   SQL: "Complex joins, window functions and query tuning across Postgres and analytics warehouses.",
@@ -33,7 +33,7 @@ const skillDetails: Record<string, string> = {
 const skillGroups = [
   {
     category: "Languages",
-    skills: ["Python", "SQL", "Java", "Bash"],
+    skills: ["Python", "SQL", "Bash"],
   },
   {
     category: "Backend",
