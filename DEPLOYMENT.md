@@ -49,8 +49,8 @@ bun run build
 Output layout (Nitro):
 
 ```
-dist/
-├── client/    ← static assets (JS, CSS, images)
+.output/
+├── public/    ← static assets (JS, CSS, images) + prerendered index.html
 └── server/    ← SSR worker bundle (Cloudflare / Nitro)
 ```
 
@@ -82,13 +82,14 @@ serves the client bundle only. Use it for a quick static preview; use
 App Hosting for anything real.
 
 `firebase.json` is preconfigured to:
-- serve from `dist/client`
+- run `npm run build` before deploy
+- serve from `.output/public`
 - SPA fallback (`**` → `/index.html`) so deep links work
 - long cache headers on JS/CSS/fonts/images, no-cache on `index.html`
 
-Note: TanStack Start does not emit a static `dist/client/index.html`,
-so pure static hosting will 404 on first paint. Prefer 4a unless you
-add a custom prerender step.
+Note: TanStack Start does not emit a static home page by default, so
+`scripts/prerender.mjs` creates `.output/public/index.html` after the build.
+Prefer 4a for full SSR; Hosting is a static fallback.
 
 ```bash
 bun run build

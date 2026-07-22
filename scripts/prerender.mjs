@@ -1,14 +1,14 @@
-// Prerenders route(s) into dist/client/*.html so Firebase Hosting (static) can serve them.
+// Prerenders route(s) into .output/public/*.html so Firebase Hosting (static) can serve them.
 // Runs after `bun run build`. Uses the Nitro SSR bundle directly.
 import { writeFile, mkdir } from "node:fs/promises";
-import { dirname, join } from "node:path";
-import { pathToFileURL } from "node:url";
+import { dirname } from "node:path";
+import { fileURLToPath } from "node:url";
 
 const ROUTES = ["/"];
-const CLIENT_DIR = new URL("../dist/client/", import.meta.url);
-const SSR_ENTRY = new URL("../dist/server/_ssr/ssr.mjs", import.meta.url);
+const CLIENT_DIR = new URL("../.output/public/", import.meta.url);
+const SSR_ENTRY = new URL("../.output/server/_ssr/ssr.mjs", import.meta.url);
 
-const mod = await import(pathToFileURL(SSR_ENTRY.pathname).href);
+const mod = await import(SSR_ENTRY.href);
 const handler = mod.default;
 if (!handler?.fetch) {
   throw new Error("SSR handler missing .fetch — did the build run?");
@@ -26,7 +26,8 @@ for (const route of ROUTES) {
     route === "/"
       ? new URL("index.html", CLIENT_DIR)
       : new URL(`.${route}/index.html`, CLIENT_DIR);
-  await mkdir(dirname(outPath.pathname), { recursive: true });
+  const outPathname = fileURLToPath(outPath);
+  await mkdir(dirname(outPathname), { recursive: true });
   await writeFile(outPath, html, "utf8");
-  console.log(`✓ prerendered ${route} → ${outPath.pathname}`);
+  console.log(`✓ prerendered ${route} → ${outPathname}`);
 }

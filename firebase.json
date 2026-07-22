@@ -1,7 +1,7 @@
 {
   "hosting": {
-    "predeploy": ["bun run build"],
-    "public": "dist/client",
+    "predeploy": ["npm run build"],
+    "public": ".output/public",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "cleanUrls": true,
     "trailingSlash": false,
