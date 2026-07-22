@@ -30,9 +30,9 @@ export default function GenerativeVisual({ className }: GenerativeVisualProps) {
     };
 
     const palette = () => ({
-      node: "hsl(217, 95%, 75%)",
-      line: "hsl(48, 96%, 58%)",
-      pulse: "hsl(48, 96%, 72%)",
+      node: "hsl(217, 95%, 78%)",
+      line: "hsl(48, 96%, 62%)",
+      pulse: "hsl(48, 96%, 75%)",
     });
 
     const count = 64;
@@ -200,7 +200,7 @@ export default function GenerativeVisual({ className }: GenerativeVisualProps) {
     <div ref={containerRef} className={`relative w-full h-full ${className ?? ""}`}>
       <canvas
         ref={canvasRef}
-        className="pointer-events-auto absolute inset-0 block h-full w-full rounded-2xl drop-shadow-[0_0_42px_hsl(217,95%,75%,0.8)]"
+        className="pointer-events-auto absolute inset-0 block h-full w-full rounded-2xl drop-shadow-[0_0_42px_hsl(217,95%,78%,0.8)]"
       />
     </div>
   );
